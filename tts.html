@@ -8,7 +8,7 @@
     </style>
     <script type="text/javascript">
       var buildUrl = function () {
-        return "http://translate.google.com/translate_tts?tl="+document.getElementById("form_tl").value+"&q="+document.getElementById("form_q").value;
+        return "http://translate.google.com/translate_tts?tl="+document.getElementById("form_tl").value+"&q="+encodeURIComponent(document.getElementById("form_q").value);
       }
       
       var buildLink = function ()  {
