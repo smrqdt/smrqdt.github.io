@@ -2,18 +2,29 @@
 <html>
   <head>
     <title>Google TTS Form</title>
+    <style type="text/css">
+      
+      
+    </style>
+    <script type="text/javascrip">
+      var buildUrl = function () {
+        return "http://translate.google.com/translate_tts?tl="+getElementById(form_tl).value+"&q="+getElementById(form_q).value;
+      }
+      
+      var buildlLink = function ()  {
+        getElementById(linkOutput) = "<a scr=\""+buildUrl+"\" download=\""+getElementById(form_q).value+".mp3\">Link zum MP3 mit dem Text \""+getElementById(form_q).value+"\"</a>"
+      }
+    </script>
   </head>
   <body>
     <h2>Google TTS</h2>
     <form action="http://translate.google.com/translate_tts" method="get">
       <label>Sprache: 
-        <select name="tl">
-          <option>de</option>
-          <option>en</option>
-        </select>
+        <input id="form_tl" value="de" />
       </label>
-      <label>Text: <textarea name="q" size="1000"></textarea></label>
-      <input type="submit" />
+      <label>Text: <textarea name="q" id="form_q" style="width:'80ex' height: '40%'"></textarea></label>
+      <input type="button" value"Link generieren" onclick="buildLink();"/>
     </form>
+    <div id="linkOutput"></div>
   </body> 
 </html>
