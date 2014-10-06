@@ -20,12 +20,16 @@
   <body>
     <h2>Google TTS</h2>
     <form action="http://translate.google.com/translate_tts" method="get">
-      <label>Sprache: 
-        <input id="form_tl" value="de" />
-      </label>
-      <label>Text: <textarea name="q" id="form_q" style="width:'80ex' height: '40%'"></textarea></label>
+      <p>
+        <label>Sprache: 
+          <input id="form_tl" value="de" />
+        </label>
+      </p>
+      <p>
+        <label>Text: <textarea name="q" id="form_q" style="width:'80ex' height: '40%'"></textarea></label>
+      </p>
       <input type="button" value="Link generieren" onclick="buildLink();"/>
     </form>
-    <div id="linkOutput"></div>
+    <p id="linkOutput"></p>
   </body> 
 </html>
