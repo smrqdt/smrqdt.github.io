@@ -11,7 +11,7 @@
         return "http://translate.google.com/translate_tts?tl="+getElementById(form_tl).value+"&q="+getElementById(form_q).value;
       }
       
-      var buildlLink = function ()  {
+      var buildLink = function ()  {
         getElementById(linkOutput) = "<a scr=\""+buildUrl+"\" download=\""+getElementById(form_q).value+".mp3\">Link zum MP3 mit dem Text \""+getElementById(form_q).value+"\"</a>"
       }
     </script>
